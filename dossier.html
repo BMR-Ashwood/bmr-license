@@ -1,213 +1,43 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Архив досье — БМР Эшвуд</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Courier+Prime:wght@400;700&family=Special+Elite&family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
-<style>
-  body {
-    background: #2a2520;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.15'/%3E%3C/svg%3E");
-    color: #1a1a1a;
-  }
-  .paper {
-    background: #ddd5c0;
-    background-image:
-      radial-gradient(ellipse at 20% 10%, rgba(120,90,50,0.18) 0%, transparent 40%),
-      radial-gradient(ellipse at 80% 80%, rgba(100,70,40,0.22) 0%, transparent 45%),
-      radial-gradient(ellipse at 60% 30%, rgba(80,60,30,0.10) 0%, transparent 35%),
-      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='5'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.10'/%3E%3C/svg%3E");
-    box-shadow: 0 10px 40px rgba(0,0,0,0.7), inset 0 0 60px rgba(90,60,30,0.15);
-  }
-  .serif { font-family: 'Playfair Display', serif; }
-  .type { font-family: 'Courier Prime', monospace; }
-  .stamp { font-family: 'Special Elite', cursive; }
-  .blackletter { font-family: 'UnifrakturCook', 'Playfair Display', serif; }
-  .divider { border-top: 1px solid #3a2f20; }
-  .divider-thick { border-top: 3px double #1a1a1a; }
-  .divider-dots { border-top: 2px dotted #3a2f20; }
-  .stamp-red { color: #8b1a1a; border: 3px double #8b1a1a; transform: rotate(-8deg); opacity: 0.9; }
-  .stamp-black { color: #1a1a1a; border: 3px double #1a1a1a; transform: rotate(-6deg); opacity: 0.85; }
-  .text-dim { color: #5a4a30; }
-  .text-bright { color: #0a0a0a; }
-  .photo-bw { filter: grayscale(100%) contrast(1.15) brightness(0.95) sepia(15%); }
-  .photo-frame { border: 3px solid #1a1a1a; padding: 4px; background: #c8bfa8; box-shadow: 0 3px 10px rgba(0,0,0,0.4); }
-  .headline-box { border-top: 3px solid #1a1a1a; border-bottom: 3px solid #1a1a1a; }
-  .section-label { font-family: 'Special Elite', cursive; letter-spacing: 0.15em; }
-</style>
-</head>
-<body>
+<section class="paper p-6 mb-6 border">
+  <h2 class="serif font-bold text-lg mb-3 text-bright border-b border-stone-700 pb-2">КАТЕГОРИИ ЛИЦЕНЗИЙ</h2>
+  
+  <p class="type text-sm mb-4 leading-relaxed text-amber-200/80 font-bold">
+    ВАЖНО: Класс лицензии зависит не только от происхождения дара, но и от его разрушительной силы и уровня образования мага.
+  </p>
 
-<!-- ===== TOP BAR ===== -->
-<div class="bg-black text-stone-300 text-xs type py-2 px-4 flex justify-between border-b-2 border-stone-700">
-  <span>ФЕДЕРАЛЬНОЕ БЮРО — ОТДЕЛЕНИЕ ЭШВУДА</span>
-  <span>12 МАРТА 1922 г.</span>
-</div>
+  <div class="space-y-4 type text-sm">
+    
+    <!-- I КЛАСС -->
+    <div class="border-l-4 border-amber-700 pl-4 py-1">
+      <p class="font-bold text-bright text-base mb-1">I класс — Высшая прикладная магия</p>
+      <p class="text-dim mb-2"><span class="font-bold text-amber-200/80">Сила дара:</span> Разрушительная или всеобъемлющая. Способность изменять материю, управлять стихиями или воздействовать на разум. <i>(Пример: способен снести стену или пройти сквозь неё, не оставив следа).</i></p>
+      <p class="text-dim mb-2"><span class="font-bold text-amber-200/80">Образование:</span> Обязательно высшее магическое или профильное (юридическое, физико-математическое). Без диплома — не выдаётся.</p>
+      <p class="text-dim"><span class="font-bold text-amber-200/80">Права:</span> Разрешены почти все практики, кроме прямо запрещённых. Требует ежегодного подтверждения квалификации.</p>
+    </div>
 
-<div class="max-w-5xl mx-auto px-2 md:px-4 py-6 md:py-10">
+    <!-- II КЛАСС -->
+    <div class="border-l-4 border-amber-700 pl-4 py-1">
+      <p class="font-bold text-bright text-base mb-1">II класс — Ограниченная практика</p>
+      <p class="text-dim mb-2"><span class="font-bold text-amber-200/80">Сила дара:</span> Стабильная, контролируемая. Позволяет взаимодействовать со сложными средами. <i>(Пример: способен проходить сквозь плотные стены, но не может их разрушить).</i></p>
+      <p class="text-dim mb-2"><span class="font-bold text-amber-200/80">Образование:</span> Обязательно высшее образование. «Простым смертным» без диплома II класс не выдаётся.</p>
+      <p class="text-dim"><span class="font-bold text-amber-200/80">Права:</span> Бытовые, ремесленные и медицинские заклинания. Строго запрещено вмешательство в чужое сознание, некромантия, изменение погоды.</p>
+    </div>
 
-  <a href="reestr.html" class="type text-xs text-stone-400 hover:text-amber-200 mb-4 inline-block">← К РЕЕСТРУ</a>
+    <!-- III КЛАСС -->
+    <div class="border-l-4 border-stone-600 pl-4 py-1">
+      <p class="font-bold text-bright text-base mb-1">III класс — Наблюдаемая практика</p>
+      <p class="text-dim mb-2"><span class="font-bold text-amber-200/80">Сила дара:</span> Слабая или узкоспециализированная. Ограниченное воздействие на физический мир. <i>(Пример: способен проходить только через открытые двери или манипулировать мелкими предметами).</i></p>
+      <p class="text-dim mb-2"><span class="font-bold text-amber-200/80">Образование:</span> Не требуется. Однако, для носителей дара без образования вводится обязательный ежеквартальный надзор.</p>
+      <p class="text-dim"><span class="font-bold text-amber-200/80">Права:</span> Использование дара только в бытовых целях. Обязательная явка в Бюро раз в квартал.</p>
+    </div>
 
-  <!-- ===== NEWSPAPER ===== -->
-  <div class="paper p-6 md:p-10 relative">
-
-    <!-- MASTHEAD -->
-    <header class="text-center mb-6">
-      <div class="type text-xs tracking-[0.3em] text-dim mb-2">АРХИВ ОТДЕЛЕНИЯ · ОГАЙО</div>
-      <h1 class="blackletter text-4xl md:text-6xl text-bright leading-none mb-2">Эшвудский Вестник</h1>
-      <div class="type text-xs tracking-[0.4em] text-dim">ASHWOOD HERALD · ОФИЦИАЛЬНЫЙ АРХИВ ДОСЬЕ</div>
-      <div class="divider-thick mt-4"></div>
-      <div class="type text-xs flex justify-between pt-2 text-dim">
-        <span>ТОМ XIV · № 0114–0115</span>
-        <span>ЦЕНА: 2 ЦЕНТА</span>
-        <span>12 МАРТА 1922 г.</span>
-      </div>
-      <div class="divider-thick"></div>
-    </header>
-
-    <!-- ============ ДОСЬЕ №1 — МЕНДЕЛЬ ============ -->
-    <section id="mendel" class="mb-10 relative">
-
-      <!-- HEADLINE -->
-      <div class="headline-box py-4 mb-4 relative">
-        <div class="stamp stamp-red absolute -top-3 right-4 px-3 py-1 text-xs bg-[#ddd5c0]">СКОНЧАЛСЯ</div>
-        <div class="type text-xs text-center tracking-[0.3em] text-dim mb-1">ДОСЬЕ № 0114-А · ЛИЧНОЕ ДЕЛО</div>
-        <h2 class="serif text-3xl md:text-5xl font-black text-center text-bright leading-tight tracking-tight">ГРЕГОР МЕНДЕЛЬ</h2>
-        <div class="type text-xs text-center text-dim mt-2 italic">Директор Бюро Магического Регулирования · Отделение Эшвуд</div>
-      </div>
-
-      <!-- 3-COLUMN LAYOUT -->
-      <div class="grid md:grid-cols-3 gap-5">
-
-        <!-- COLUMN 1 — PHOTO -->
-        <div class="md:col-span-1">
-          <div class="photo-frame">
-            <img src="https://i.postimg.cc/253YzhnL/govno.jpg" alt="Грегор Мендель" class="w-full aspect-[3/4] object-cover photo-bw">
-          </div>
-          <div class="type text-[10px] text-dim text-center mt-2 italic">
-            Личный состав Бюро. Фотография из архива.
-          </div>
-        </div>
-
-        <!-- COLUMN 2 — BASIC DATA -->
-        <div class="md:col-span-1 type text-sm space-y-3">
-          <div class="section-label text-xs text-bright border-b border-stone-700 pb-1 mb-2">ОСНОВНЫЕ СВЕДЕНИЯ</div>
-          <p><span class="font-bold text-bright">Имя:</span> Грегор Мендель</p>
-          <p><span class="font-bold text-bright">Должность:</span> Директор БМР, отделение Эшвуд</p>
-          <p><span class="font-bold text-bright">Годы жизни:</span> 1858 — 1922</p>
-          <p><span class="font-bold text-bright">Статус мага:</span> Лицензия I класса, №0114-А</p>
-          <div class="divider-dots my-3"></div>
-          <p class="text-xs text-dim italic">Материалы дела подшиты и переданы в архив 12 марта 1922 г.</p>
-        </div>
-
-        <!-- COLUMN 3 — CIRCUMSTANCES -->
-        <div class="md:col-span-1 type text-sm space-y-3">
-          <div class="section-label text-xs text-bright border-b border-stone-700 pb-1 mb-2">ОБСТОЯТЕЛЬСТВА КОНЧИНЫ</div>
-          <p><span class="font-bold text-bright">Смерть:</span> <span class="bg-[#c8bfa8] px-1">обстоятельства не установлены</span>.</p>
-          <p>Тело обнаружено в служебном кабинете 11 марта, за 14 часов до подписания Протокола Гармонии.</p>
-          <div class="divider-dots my-2"></div>
-          <p><span class="font-bold text-bright">Причина:</span> Официально — «сердечный приступ». Экспертиза магического фона <span class="bg-[#c8bfa8] px-1">не проводилась</span>.</p>
-          <p class="stamp text-sm mt-3 text-stone-800">«Он был за день до величайшей реформы. За день.»<br><span class="type text-[10px] text-dim">— из частной переписки</span></p>
-        </div>
-      </div>
-
-      <!-- SERVICE RECORD -->
-      <div class="mt-6 pt-4 divider-thick">
-        <div class="section-label text-sm text-bright mb-3">ПОСЛУЖНОЙ СПИСОК</div>
-        <div class="grid md:grid-cols-2 gap-x-8 gap-y-2 type text-sm">
-          <p><span class="font-bold text-bright">1887:</span> Поступление на службу в Бюро, отделение Эшвуд.</p>
-          <p><span class="font-bold text-bright">1894:</span> Назначение инспектором III категории.</p>
-          <p><span class="font-bold text-bright">1901:</span> Повышение до старшего инспектора.</p>
-          <p><span class="font-bold text-bright">1908:</span> Назначение заместителем Директора.</p>
-          <p><span class="font-bold text-bright">1915:</span> Назначение Директором отделения Эшвуд.</p>
-          <p><span class="font-bold text-bright">1922:</span> Инициатор Протокола Гармонии. Скончался 11 марта.</p>
-        </div>
-      </div>
-
-      <div class="mt-6 pt-4 divider-thick type text-sm">
-        <span class="font-bold text-bright">СТАТУС ДЕЛА:</span> <span class="stamp text-red-800">ЗАКРЫТО ПО ФАКТУ СМЕРТИ</span>. Досье передано в архив.
-      </div>
-
-    </section>
-
-    <!-- DIVIDER BETWEEN DOSSIERS -->
-    <div class="divider-thick my-10"></div>
-    <div class="text-center type text-xs tracking-[0.4em] text-dim mb-10">— ПОСТУПИЛО НОВОЕ ДЕЛО —</div>
-
-    <!-- ============ ДОСЬЕ №2 — МОРРИГАН ============ -->
-    <section id="morrigan" class="relative">
-
-      <!-- HEADLINE -->
-      <div class="headline-box py-4 mb-4 relative">
-        <div class="stamp stamp-black absolute -top-3 right-4 px-3 py-1 text-xs bg-[#ddd5c0]">ЛИЧНОЕ ДЕЛО</div>
-        <div class="type text-xs text-center tracking-[0.3em] text-dim mb-1">ДОСЬЕ № 0115-А · ЛИЧНОЕ ДЕЛО</div>
-        <h2 class="serif text-3xl md:text-5xl font-black text-center text-bright leading-tight tracking-tight">МАЙКЛ МОРРИГАН</h2>
-        <div class="type text-xs text-center text-dim mt-2 italic">Кодовое обозначение: «Патриот» · Служба в структурах Бюро</div>
-      </div>
-
-      <!-- 3-COLUMN LAYOUT -->
-      <div class="grid md:grid-cols-3 gap-5">
-
-        <!-- COLUMN 1 — PHOTO -->
-        <div class="md:col-span-1">
-          <div class="photo-frame">
-            <img src="https://i.postimg.cc/gwM92LTM/xx.jpg" alt="Майкл Морриган" class="w-full aspect-[3/4] object-cover photo-bw">
-          </div>
-          <div class="type text-[10px] text-dim text-center mt-2 italic">
-            Фотография подшита к делу.
-          </div>
-        </div>
-
-        <!-- COLUMN 2 — BASIC DATA -->
-        <div class="md:col-span-1 type text-sm space-y-3">
-          <div class="section-label text-xs text-bright border-b border-stone-700 pb-1 mb-2">ОСНОВНЫЕ СВЕДЕНИЯ</div>
-          <p><span class="font-bold text-bright">Имя:</span> Майкл Морриган</p>
-          <p><span class="font-bold text-bright">Кодовое обозначение:</span> «Патриот»</p>
-          <p><span class="font-bold text-bright">Статус мага:</span> Лицензия I класса, №0115-А</p>
-          <p><span class="font-bold text-bright">Место рождения:</span> Эшвуд, Огайо</p>
-          <p><span class="font-bold text-bright">Год рождения:</span> 1895</p>
-          <p><span class="font-bold text-bright">Род деятельности:</span> Служба в структурах Бюро</p>
-        </div>
-
-        <!-- COLUMN 3 — NOTES -->
-        <div class="md:col-span-1 type text-sm space-y-3">
-          <div class="section-label text-xs text-bright border-b border-stone-700 pb-1 mb-2">ПРИМЕЧАНИЯ</div>
-          <p class="text-dim italic">я не придумал что тут писать, Эми, но тут будет выжимка из анкеты</p>
-          <div class="divider-dots my-3"></div>
-          <p class="text-xs text-dim">Дело находится в стадии заполнения. Инспектору поручено дополнить материал в срок до 30 дней.</p>
-        </div>
-      </div>
-
-      <!-- QUESTIONNAIRE -->
-      <div class="mt-6 pt-4 divider-thick">
-        <div class="section-label text-sm text-bright mb-3">АНКЕТА</div>
-        <div class="grid md:grid-cols-2 gap-x-8 gap-y-2 type text-sm">
-          <p><span class="font-bold text-bright">Магические способности:</span> <span class="text-dim">[уточняется]</span></p>
-          <p><span class="font-bold text-bright">Образование:</span> <span class="text-dim">[уточняется]</span></p>
-          <p><span class="font-bold text-bright">Семейное положение:</span> <span class="text-dim">[уточняется]</span></p>
-          <p><span class="font-bold text-bright">Отношение к Протоколу Гармонии:</span> <span class="text-dim">[уточняется]</span></p>
-          <p class="md:col-span-2"><span class="font-bold text-bright">Примечания инспектора:</span> <span class="text-dim">[уточняется]</span></p>
-        </div>
-      </div>
-
-      <div class="mt-6 pt-4 divider-thick type text-sm">
-        <span class="font-bold text-bright">СТАТУС ДЕЛА:</span> <span class="stamp text-red-800">ОТКРЫТО</span>. Досье в стадии заполнения.
-      </div>
-
-    </section>
-
-    <!-- FOOTER -->
-    <div class="divider-thick mt-10"></div>
-    <div class="type text-[10px] text-dim text-center py-4 leading-relaxed">
-      ЭШВУДСКИЙ ВЕСТНИК · ОФИЦИАЛЬНЫЙ АРХИВ БЮРО МАГИЧЕСКОГО РЕГУЛИРОВАНИЯ<br>
-      Отделение Эшвуд · ул. Кленовая, 14 · 1922 г.
+    <!-- IV КЛАСС -->
+    <div class="border-l-4 border-red-800 pl-4 py-1">
+      <p class="font-bold text-red-400 text-base mb-1">IV класс — Условная регистрация (Опасные)</p>
+      <p class="text-dim mb-2"><span class="font-bold text-amber-200/80">Сила дара:</span> Нестабильная или потенциально смертоносная. Либо дар любого уровня у лица с непогашенной судимостью.</p>
+      <p class="text-dim mb-2"><span class="font-bold text-amber-200/80">Образование:</span> Не имеет значения.</p>
+      <p class="text-dim"><span class="font-bold text-amber-200/80">Права:</span> Фактический запрет на практику. Любое применение магии — только под присмотром инспектора Бюро.</p>
     </div>
 
   </div>
-
-</div>
-
-</body>
-</html>
+</section>
